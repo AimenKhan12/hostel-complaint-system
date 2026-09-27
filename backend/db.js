@@ -14,13 +14,16 @@ const pool = new Pool({
 });
 
 // Quick check when the server starts, so you immediately know if the DB is connected
-pool.connect()
-  .then(client => {
-    console.log('✅ Connected to PostgreSQL database');
-    client.release();
-  })
-  .catch(err => {
-    console.error('❌ Could not connect to database:', err.message);
-  });
+// Only run when launched directly (node server.js), NOT when imported by Vercel serverless
+if (require.main === module) {
+  pool.connect()
+    .then(client => {
+      console.log('✅ Connected to PostgreSQL database');
+      client.release();
+    })
+    .catch(err => {
+      console.error('❌ Could not connect to database:', err.message);
+    });
+}
 
 module.exports = pool;
