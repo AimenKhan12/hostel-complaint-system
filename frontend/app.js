@@ -2,7 +2,7 @@
 // Every function here does the SAME kind of thing:
 // call the backend with fetch() -> get JSON back -> update the page.
 // Change this if your backend runs on a different port.
-const API = 'http://localhost:5000/api';
+const API = 'https://hostel-complaint-system-blond.vercel.app/';
 
 // ---------- SCREEN SWITCHING ----------
 function showScreen(id) {

@@ -11,8 +11,8 @@ const complaintRoutes = require('./routes/complaints');
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5500', 'http://127.0.0.1:5500', 'https://tumhara-project.vercel.app'],
-  credentials: true,
+  origin: ['http://localhost:5500', 'http://127.0.0.1:5500',
+'https://frontend-chi-jet-bp57uucwa2.vercel.app/&#39'],  credentials: true,
 }));
 app.use(express.json());
 
